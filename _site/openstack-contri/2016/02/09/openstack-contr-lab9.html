@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+	<html>
+
+		<head>
+			<title>Openstack eLab</title>
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="/assets/javascript/animate_progress_bar.js"></script>
+
+		</head>
+
+		<body>
+
+			<title>Openstack eLab</title>
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="/assets/javascript/animate_progress_bar.js"></script>
+
+
+			<div class="container">
+			
+			<div class="post">
+
+	<h1 class="post-title">Lab 9 Document Change Verification</h1>
+
+	
+
+	     
+
+	
+
+	     
+
+	
+
+	     
+
+	
+
+	     
+
+	
+
+	     
+
+	
+
+	     
+
+	
+
+	     
+
+	
+
+	     
+	    
+	       <iframe width="840" height="540" src="https://www.youtube.com/embed/LDGI_WBoN8Y" frameborder="0" allowfullscreen></iframe>
+
+          <br>
+          <h3 id="host_tip">Run your own host and try it!</h3>
+          <button type="button" id="create_host">Create the host!</button>
+          <progress id="host_progress_bar" value="0" max="100"></progress>
+          <div id=host_list style="display: none;">
+          <div id=host_tip>
+            <hr>
+            <h3><i>How to log in your hosts?</i></h3>
+            <p>
+              Open your terminal, and type:
+              <br>"ssh username@hostIP"
+              <br>And input the password.  
+            </p>
+            
+          </div>
+
+            <hr>
+       	  	<h4>Host 1:</h4>
+       	  	<ul>
+       	  		<li><p>	Host 1 IP: 10.241.1.100</p></li>
+       	  		<li><p>	Username: ubuntu</p></li>
+       	  		<li><p>	Password: oci123</p></li>
+       	  	</ul>
+
+     		  	<h4>Host 2:</h4>
+     		  	<ul>
+     		  		<li><p>	Host 2 IP: 10.241.1.101</p></li>
+     		  		<li><p>	Username: ubuntu</p></li>
+     		  		<li><p>	Password: oci123</p></li>
+     		  	</ul>
+
+      	  	<h4>Host 3:</h4>
+      	  	<ul>
+      	  		<li><p>	Host 3 IP: 10.241.1.102</p></li>
+      	  		<li><p>	Username: ubuntu</p></li>
+      	  		<li><p>	Password: oci123</p></li>
+      	  	</ul>
+         
+          </div>
+          <hr>
+
+
+
+	   	
+
+	
+
+	     
+
+	
+
+	<h2 id="document-change-verification">Document Change Verification</h2>
+
+<p>Step 1 - Clone OpenStack Manuals</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh &lt;yourip&gt;
+git clone https://git.openstack.org/openstack/openstack-manuals
+</code></pre>
+</div>
+
+<p>Step 2 - Use Tox to Convert the OpenStack Install Guide for Ubuntu (RST to HTML)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> ~/openstack-manuals
+tox -e install-guide-ubuntu
+</code></pre>
+</div>
+
+<p>Step 3 - Open the Generated HTML</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>doc/install-guide/build-ubuntu /html/
+python -m SimpleHTTPServer 8000
+</code></pre>
+</div>
+
+<p>From your browser, go to http://your_ip:8000</p>
+
+<p>Step 4 - Make an Edit to the Install Guide</p>
+
+<p>&lt;vi,nano,etc&gt; ~/openstack-manuals/doc/install-guide/source/glance.rst</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="o">===========================================================</span>
+Image service - The Glance Image Service...is really cool!
+<span class="o">===========================================================</span>
+</code></pre>
+</div>
+
+<p>Step 5 - Use Tox to Convert RST to HTML</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> ~/openstack-manuals
+tox -e install-guide-ubuntu
+</code></pre>
+</div>
+
+<p>Step 6 - Open the Generated HTML (With Your Addition)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>doc/install-guide/build-ubuntu/html/
+python -m SimpleHTTPServer 8000
+From your browser, go to http://your_ip:8000
+</code></pre>
+</div>
+
+
+</div>
+			
+			</div>
+
+		<footer>
+	    	<footer>
+	<ul>
+        <li><a href="oci@utsa.edu">Email</a></li>
+        <li><a href="https://github.com/frank-zhangxin">Github</a></li>
+	</ul>
+</footer>
+		</footer>
+
+		</body>
+	</html>

@@ -1,28 +1,15 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Openstack eLab</title>
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
-	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="/about">About</a></li>
-        		<li><a href="/blog">Blog</a></li>
-    		</ul>
-		</nav>
-		<div class="container">
-    		<div class="blurb">
-        		<h1>Hi, this is a Openstack webase lab!</h1>
-				<p>We start one <em>Openstack cluster</em> from scratch. <a href="/about">Take a inside look...</a></p>
-    		</div><!-- /.blurb -->
-		</div><!-- /.container -->
-		<footer>
-    		<ul>
-        		<li><a href="OCI@utsa.edu">email</a></li>
-        		<li><a href="https://github.com/Frank-ZhangXin/">Github</a></a></li>
-			</ul>
-		</footer>
-	</body>
-</html>
+---
+layout: default
+title: Openstack eLab
+---
+
+<div class="container">
+	<h1>Welcome to Openstack eLab!</h1>
+	<h2>Hands-on Openstack with videos.</h2>
+	<hr>
+	{% for topic in site.data.topics %}
+	    <a {{ topic.link }} >  <h2> {{ topic.title }}</h2></a>
+	    <p>{{ topic.description }}</p>
+	{% endfor %}
+</div>
+

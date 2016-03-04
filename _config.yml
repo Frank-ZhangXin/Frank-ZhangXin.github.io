@@ -1,0 +1,7 @@
+name: Openstack eLab
+description: One interactive web-base Openstack lab.
+markdown: kramdown
+paginate: 5
+gems: 
+  - jekyll-paginate
+  - jekyll-gist

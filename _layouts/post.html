@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<div class="post">
+
+	<h1 class="post-title">{{ page.title }}</h1>
+
+	{% for video in site.data.videos %}
+
+	     {% if video.title == page.title %}
+	    
+	       {{ video.code }}
+
+          <br>
+          <h3 id="host_tip">Run your own host and try it!</h3>
+          <button type="button" id="create_host">Create the host!</button>
+          <progress id="host_progress_bar" value="0" max="100"></progress>
+          <div id=host_list style="display: none;">
+          <div id=host_tip>
+            <hr>
+            <h3><i>How to log in your hosts?</i></h3>
+            <p>
+              Open your terminal, and type:
+              <br>"ssh username@hostIP"
+              <br>And input the password.  
+            </p>
+            
+          </div>
+
+            <hr>
+       	  	<h4>Host 1:</h4>
+       	  	<ul>
+       	  		<li><p>	Host 1 IP: 10.241.1.100</p></li>
+       	  		<li><p>	Username: ubuntu</p></li>
+       	  		<li><p>	Password: oci123</p></li>
+       	  	</ul>
+
+     		  	<h4>Host 2:</h4>
+     		  	<ul>
+     		  		<li><p>	Host 2 IP: 10.241.1.101</p></li>
+     		  		<li><p>	Username: ubuntu</p></li>
+     		  		<li><p>	Password: oci123</p></li>
+     		  	</ul>
+
+      	  	<h4>Host 3:</h4>
+      	  	<ul>
+      	  		<li><p>	Host 3 IP: 10.241.1.102</p></li>
+      	  		<li><p>	Username: ubuntu</p></li>
+      	  		<li><p>	Password: oci123</p></li>
+      	  	</ul>
+         
+          </div>
+          <hr>
+
+
+
+	   	{% endif %}
+
+	{% endfor %}
+
+	{{ content }}
+
+</div>
