@@ -3,25 +3,64 @@
 
 		<head>
 			<title>Openstack eLab</title>
+<!--
 <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+-->
+<!--Camera icon-->
 <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="/assets/javascript/animate_progress_bar.js"></script>
+<!--CSS style sheet added below-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
+<!-- Bootstrap core CSS -->
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+<!-- Custom styles for this template 
+<link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+-->
+<!-- Custom styles for this template -->
+<link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+<!--CSS style sheet end-->
+
+<!--Navigation bar-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Openstack eLab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" placeholder="Email" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Sign in</button>
+      </form>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
 		</head>
 
 		<body>
 
-			<title>Openstack eLab</title>
-<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="/assets/javascript/animate_progress_bar.js"></script>
-
-
-			<div class="container">
+			<!--Entry for index.html-->
 			
-			<div class="post">
+			<div class=container id="post">
+
 
 	<h1 class="post-title">Lab 6 Working with Bugs</h1>
 
@@ -49,50 +88,76 @@
 
 	     
 	    
-	       <iframe width="840" height="540" src="https://www.youtube.com/embed/LbTzJ0DrJsA" frameborder="0" allowfullscreen></iframe>
+	       <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LbTzJ0DrJsA" frameborder="0" allowfullscreen></iframe></div>
 
           <br>
-          <h3 id="host_tip">Run your own host and try it!</h3>
-          <button type="button" id="create_host">Create the host!</button>
-          <progress id="host_progress_bar" value="0" max="100"></progress>
-          <div id=host_list style="display: none;">
-          <div id=host_tip>
-            <hr>
-            <h3><i>How to log in your hosts?</i></h3>
-            <p>
-              Open your terminal, and type:
-              <br>"ssh username@hostIP"
-              <br>And input the password.  
-            </p>
-            
+          <div class="alert alert-info" role="alert">
+              <strong>Let's go!</strong> Run your own hosts.
           </div>
 
-            <hr>
-       	  	<h4>Host 1:</h4>
-       	  	<ul>
-       	  		<li><p>	Host 1 IP: 10.241.1.100</p></li>
-       	  		<li><p>	Username: ubuntu</p></li>
-       	  		<li><p>	Password: oci123</p></li>
-       	  	</ul>
+          <div class="alert alert-success fade in" id="host_create_tip" style="display: none;">
+              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+              <strong>Host are created successfully!</strong> Login and try them.
+          </div>
 
-     		  	<h4>Host 2:</h4>
-     		  	<ul>
-     		  		<li><p>	Host 2 IP: 10.241.1.101</p></li>
-     		  		<li><p>	Username: ubuntu</p></li>
-     		  		<li><p>	Password: oci123</p></li>
-     		  	</ul>
+          <button type="button" class="btn btn-lg btn-primary" id="create_host">Create your host!</button>
 
-      	  	<h4>Host 3:</h4>
-      	  	<ul>
-      	  		<li><p>	Host 3 IP: 10.241.1.102</p></li>
-      	  		<li><p>	Username: ubuntu</p></li>
-      	  		<li><p>	Password: oci123</p></li>
-      	  	</ul>
+          <p>
+
+          </p>
+
+          <div class="progress" id="progress_class" style="display: none;">
+              <div class="progress-bar progress-bar-striped" id="host_progress_bar2" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 0%"><span class="sr-only">0% Complete</span></div>
+          </div>
+          
+
+          <div id=host_login_tip style="display: none;">
+            
+            <div class="col-md-4">
+              <div class="bs-callout bs-callout-info" id="how_to_login">
+                <h3><i>How to log in your hosts?</i></h3>
+                <p>
+                  Open your terminal, and type:
+                  <code>ssh username@hostIP</code>
+                  <br>And input the password.  
+                </p>
+              </div>
+            </div>
+
+            <div class="col-md-8">
+              <table class="table table-condensed" id="host_key">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>Host 1</th>
+                    <th>Host 2</th>
+                    <th>host 3</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>IP</td>
+                    <td>10.241.1.101</td>
+                    <td>10.241.1.102</td>
+                    <td>10.241.1.103</td>
+                  </tr>
+                  <tr>
+                    <td>Username</td>
+                    <td>ubuntu</td>
+                    <td>ubuntu</td>
+                    <td>ubuntu</td>
+                  </tr>
+                  <tr>
+                    <td>Password</td>
+                    <td>oci123</td>
+                    <td>oci123</td>
+                    <td>oci123</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
          
           </div>
-          <hr>
-
-
 
 	   	
 
@@ -127,9 +192,22 @@
 <p>Step 7 - File a New Bug</p>
 
 
+
 </div>
+
+
 			
-			</div>
+
+		<!--Javascript-->
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="/assets/javascript/animate_progress_bar.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+		</body>
 
 		<footer>
 	    	<footer>
@@ -140,5 +218,4 @@
 </footer>
 		</footer>
 
-		</body>
 	</html>

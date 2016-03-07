@@ -1,26 +1,27 @@
 - title: Lab 1 Create an Ubuntu One Account
-  code: <iframe width="840" height="540" src="https://www.youtube.com/embed/FYou29ov3qU" frameborder="0" allowfullscreen></iframe>
+  code: <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/FYou29ov3qU" frameborder="0" allowfullscreen></iframe></div>
 
 - title: Lab 2 Join the OpenStack Foundation
-  code: <iframe width="840" height="540" src="https://www.youtube.com/embed/0X5V3C4jdKI" frameborder="0" allowfullscreen></iframe>
+  code: <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0X5V3C4jdKI" frameborder="0" allowfullscreen></iframe></div>
 
 - title: Lab 3 Lab 3 Setup Gerrit Account
-  code: <iframe width="840" height="540" src="https://www.youtube.com/embed/oZ0sGpigHFA" frameborder="0" allowfullscreen></iframe>
+  code: <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/oZ0sGpigHFA" frameborder="0" allowfullscreen></iframe></div>
 
 - title: Lab 4 Setup Git Review
-  code: <iframe width="840" height="540" src="https://www.youtube.com/embed/9EL90z1h1FM" frameborder="0" allowfullscreen></iframe>
+  code: <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/9EL90z1h1FM" frameborder="0" allowfullscreen></iframe></div>
 
 - title: Lab 5 Testing
-  code: <iframe width="840" height="540" src="https://www.youtube.com/embed/d4XWYmxuy9k" frameborder="0" allowfullscreen></iframe>
+  code: <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d4XWYmxuy9k" frameborder="0" allowfullscreen></iframe></div>
 
 - title: Lab 6 Working with Bugs
-  code: <iframe width="840" height="540" src="https://www.youtube.com/embed/LbTzJ0DrJsA" frameborder="0" allowfullscreen></iframe>
+  code: <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LbTzJ0DrJsA" frameborder="0" allowfullscreen></iframe></div>
+
 
 - title: Lab 7 Committing A Bug Fix
-  code: <iframe width="840" height="540" src="https://www.youtube.com/embed/4lXJFM5NCZg" frameborder="0" allowfullscreen></iframe>
+  code: <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4lXJFM5NCZg" frameborder="0" allowfullscreen></iframe></div>
 
 - title: Lab 9 Document Change Verification 
-  code: <iframe width="840" height="540" src="https://www.youtube.com/embed/LDGI_WBoN8Y" frameborder="0" allowfullscreen></iframe>
+  code: <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/LDGI_WBoN8Y" frameborder="0" allowfullscreen></iframe></div>
 
 - title: Lab 10 Submitting Your Info to Stackalytics
-  code: <iframe width="840" height="540" src="https://www.youtube.com/embed/xAJwW9SKgj8" frameborder="0" allowfullscreen></iframe>
+  code: <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xAJwW9SKgj8" frameborder="0" allowfullscreen></iframe></div>

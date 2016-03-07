@@ -7,17 +7,24 @@
 
 		<body>
 
-			{% include header.html %}
-
-			<div class="container">
+			<!--Entry for index.html-->
 			
 			{{ content }}
 			
-			</div>
+
+		<!--Javascript-->
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="/assets/javascript/animate_progress_bar.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+		</body>
 
 		<footer>
 	    	{% include footer.html %}
 		</footer>
 
-		</body>
 	</html>

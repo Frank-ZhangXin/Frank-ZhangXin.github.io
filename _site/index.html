@@ -3,40 +3,108 @@
 
 		<head>
 			<title>Openstack eLab</title>
+<!--
 <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+-->
+<!--Camera icon-->
 <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="/assets/javascript/animate_progress_bar.js"></script>
+<!--CSS style sheet added below-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="icon" href="../../favicon.ico">
+<!-- Bootstrap core CSS -->
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+<!-- Custom styles for this template 
+<link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+-->
+<!-- Custom styles for this template -->
+<link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+<!--CSS style sheet end-->
+
+<!--Navigation bar-->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Openstack eLab</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" placeholder="Email" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Sign in</button>
+      </form>
+    </div><!--/.navbar-collapse -->
+  </div>
+</nav>
 		</head>
 
 		<body>
 
-			<title>Openstack eLab</title>
-<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
-<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="/assets/javascript/animate_progress_bar.js"></script>
-
-
-			<div class="container">
+			<!--Entry for index.html-->
 			
-			<div class="container">
-	<h1>Welcome to Openstack eLab!</h1>
-	<h2>Hands-on Openstack with videos.</h2>
+			<!--Banner-->
+<div class="jumbotron">
+   	<div class="container">
+       	<h1>Welcome to Openstack eLab!</h1>
+       	<p>The OCI has one of the largest Open Clouds in academia utilizing OpenStack software, co-founded by Rackspace and Open Compute hardware, founded by Facebook, to support advanced computing and big-data analytics research.</p>
+       	<p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<div class="container">
+
+	<h2 class="text-center" style="padding:1em;">Hands-on Openstack with videos.</h2>
 	<hr>
-	
-	    <a href="/openstack_contribution/" target="_blank" >  <h2> Openstack Contribution</h2></a>
-	    <p>This guide provides detailed instructions on the documentation contribution workflow and conventions to be considered by all contributors. Please follow these guidelines to keep the documentation structure, style, and syntax consistent.</p>
-	
-	    <a href="/openstack_contribution/" target="_blank" >  <h2> High Available Openstack Cluster Setup</h2></a>
-	    <p>This guide describes how to install and configure OpenStack for high availability. It supplements the OpenStack Installation Guides and assumes that you are familiar with the material in those guides.This guide documents OpenStack Liberty, OpenStack Kilo, and OpenStack Juno releases.</p>
-	
+
+	<div class="container">
+      	<div class="row">
+	        
+	        	<div class="col-md-6">
+		    		<a href="/openstack_contribution" target="_blank" >  <h2> Openstack Contribution</h2></a>
+		    		<p>This guide provides detailed instructions on the documentation contribution workflow and conventions to be considered by all contributors. Please follow these guidelines to keep the documentation structure, style, and syntax consistent.</p>
+		    	</div>
+			
+	        	<div class="col-md-6">
+		    		<a href="/openstack_contribution" target="_blank" >  <h2> High Available Openstack Cluster Setup</h2></a>
+		    		<p>This guide describes how to install and configure OpenStack for high availability. It supplements the OpenStack Installation Guides and assumes that you are familiar with the material in those guides.This guide documents OpenStack Liberty, OpenStack Kilo, and OpenStack Juno releases.</p>
+		    	</div>
+			
+    	</div>
+    	<p style="padding:2em;">
+    	</p>
+    </div>
 </div>
 
 
 			
-			</div>
+
+		<!--Javascript-->
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="/assets/javascript/animate_progress_bar.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+		<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+
+		</body>
 
 		<footer>
 	    	<footer>
@@ -47,5 +115,4 @@
 </footer>
 		</footer>
 
-		</body>
 	</html>
