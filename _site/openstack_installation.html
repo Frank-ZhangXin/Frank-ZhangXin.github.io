@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+	<!--Define whole site as one app, and change state of navbar-->
+	<html ng-app="my_angular_app" ng-controller="submit_controller">
+
+		<head>
+			 <title>Openstack eLab</title>
+<!--
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+-->
+<!--Camera icon-->
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+<!--CSS style sheet added below-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Bootstrap core CSS -->
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+<!-- Custom styles for this template 
+<link href="http://getbootstrap.com/examples/carousel/carousel.css" rel="stylesheet">
+-->
+<!-- Custom styles for this template -->
+<link href="/assets/css/jumbotron.css" rel="stylesheet">
+<!--CSS style sheet end-->
+
+<!--Navigation bar-->
+<div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a id="webname" class="navbar-brand" href="/">Openstack eLab</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <form id="login" class="navbar-form navbar-right">
+          <button id="login-btn" class="btn btn-info" ng-hide="isUserLoggedIn">Login</button>
+          <button id="logout-btn" class="btn btn-info" ng-show="isUserLoggedIn">Logout</button>
+        </form>
+      </div><!--/.navbar-collapse -->
+    </div>
+  </nav>
+</div>
+		</head>
+
+		<body>
+
+			<!--Entry for index.html-->
+			<div class=container>
+	<div class="page">
+	  <h1 class="page-title">Openstack Installation</h1>
+	  <div class=container>
+	  <h2 id="video-lessons">Video Lessons</h2>
+<ul>
+	
+
+		
+		
+		<li>
+			<h3>	
+				<i class="em em-movie_camera"></i>
+				<a href="/openstack-install/2016/01/01/Course1.html" target="_blank">Course 1 Basic design and hardware investigation</a>
+			</h3>
+		</li>
+		
+		
+	
+
+		
+		
+		<li>
+			<h3>	
+				<i class="em em-movie_camera"></i>
+				<a href="/openstack-install/2016/01/02/Course2.html" target="_blank">Course 2 Key pair creation and distribution</a>
+			</h3>
+		</li>
+		
+		
+	
+
+		
+		
+		<li>
+			<h3>	
+				<i class="em em-movie_camera"></i>
+				<a href="/openstack-install/2016/01/04/Course3.html" target="_blank">Course 3 Installing Distributed Shell and other infrastructure host packages</a>
+			</h3>
+		</li>
+		
+		
+	
+
+		
+		
+		<li>
+			<h3>	
+				<i class="em em-movie_camera"></i>
+				<a href="/openstack-install/2016/01/05/Course4.html" target="_blank">Course 4 Creating partitions and logical volumes</a>
+			</h3>
+		</li>
+		
+		
+	
+
+		
+		
+		<li>
+			<h3>	
+				<i class="em em-movie_camera"></i>
+				<a href="/openstack-install/2016/01/06/Course5.html" target="_blank">Course 5 Configuring the Network</a>
+			</h3>
+		</li>
+		
+		
+	
+
+		
+		
+		<li>
+			<h3>	
+				<i class="em em-movie_camera"></i>
+				<a href="/openstack-install/2016/01/07/Course6.html" target="_blank">Course 6 Interface naming and 8021 module</a>
+			</h3>
+		</li>
+		
+		
+	
+
+		
+		
+		<li>
+			<h3>	
+				<i class="em em-movie_camera"></i>
+				<a href="/openstack-install/2016/01/09/Course7.html" target="_blank">Course 7 Configuring bridges, VLANS, and interfaces within</a>
+			</h3>
+		</li>
+		
+		
+	
+
+		
+		
+		<li>
+			<h3>	
+				<i class="em em-movie_camera"></i>
+				<a href="/openstack-install/2016/01/11/Course8.html" target="_blank">Course 8 Configuring Ansible and running playbooks</a>
+			</h3>
+		</li>
+		
+		
+	
+
+		
+		
+	
+
+		
+		
+	
+
+		
+		
+	
+
+		
+		
+	
+
+		
+		
+	
+
+		
+		
+	
+
+		
+		
+	
+
+		
+		
+	
+
+		
+		
+	
+
+</ul>
+
+	  </div>
+	</div>
+</div>
+			
+
+		<!--Javascript-->
+		<!--other-js-->
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+		<!--Angular for whole scope changing-->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+
+		<!--my-js-->
+		<script type="text/javascript" src="/assets/javascript/animate_progress_bar.js"></script>
+		<script type="text/javascript" src="/assets/javascript/my_angularJS_app.js"></script>
+		
+		</body>
+
+		<footer>
+	    	<footer>
+	<ul>
+        <li><a href="oci@utsa.edu">Email</a></li>
+        <li><a href="https://github.com/frank-zhangxin">Github</a></li>
+	</ul>
+</footer>
+		</footer>
+
+	</html>
