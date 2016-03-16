@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lab 3 Lab 3 Setup Gerrit Account
+title: Lab 3 Setup Gerrit Account
 categories: openstack-contri
 ---
 
