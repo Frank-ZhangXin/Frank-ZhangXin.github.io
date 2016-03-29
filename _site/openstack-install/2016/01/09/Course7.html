@@ -203,7 +203,7 @@
 
 	
 
-	<p>####Course 7: Configuring bridges, VLANS, and interfaces within</p>
+	<h4 id="course-7-configuring-bridges-vlans-and-interfaces-within">Course 7: Configuring bridges, VLANS, and interfaces within</h4>
 
 <p>Interface settings - bridges:</p>
 
@@ -300,7 +300,7 @@
   </tbody>
 </table>
 
-<p>#####This table details the network for all nodes and bridges.</p>
+<h5 id="this-table-details-the-network-for-all-nodes-and-bridges">This table details the network for all nodes and bridges.</h5>
 
 <table>
   <thead>
@@ -378,13 +378,13 @@ $ no vlan &amp;lt;vlan-number&amp;gt;
 
 <p>To create a new VLAN:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>vlan &amp;lt;vlan-number&amp;gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>vlan &lt;vlan-number&gt;
 </code></pre>
 </div>
 
 <p>To name the VLAN:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>name &amp;lt;vlan name&amp;gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>name &lt;vlan-name&gt;
 </code></pre>
 </div>
 
@@ -409,18 +409,18 @@ $ no vlan &amp;lt;vlan-number&amp;gt;
 
 <p>To configure a port to a VLAN you have to enter into that port number using the following:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>interface ethernet &amp;lt;port number&amp;gt; <span class="c"># (1/20 for example)</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>interface ethernet &lt;port-number&gt; <span class="c"># (1/20 for example)</span>
 </code></pre>
 </div>
 
 <p>To eliminate the port from VLAN:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>interface ethernet &amp;lt;port number&amp;gt; <span class="c"># (1/20 for example)</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>interface ethernet &lt;port-number&gt; <span class="c"># (1/20 for example)</span>
 <span class="gp">$ </span>no switchport mode trunk
 </code></pre>
 </div>
 
-<p>You should set the port to trunk mode in order to have[LR1] �traffic from outside the assigned port. If a port is not under trunk mode, you need to set a port mode using:</p>
+<p>You should set the port to trunk mode in order to have untagged traffic from outside the assigned port. If a port is not under trunk mode, you need to set a port mode using:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>switchport trunk mode
 </code></pre>
@@ -428,19 +428,19 @@ $ no vlan &amp;lt;vlan-number&amp;gt;
 
 <p>To see specifications for a particular port number:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>show running-config interface Ethernet &amp;lt;port number&amp;gt; <span class="c"># (1/20 for example)</span>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>show running-config interface Ethernet &lt;port-number&gt; <span class="c"># (1/20 for example)</span>
 </code></pre>
 </div>
 
 <p>To remove a specific port from an interface:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>no switchport trunk allowed vlan &amp;lt;port number&amp;gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>no switchport trunk allowed vlan &lt;port-number&gt;
 </code></pre>
 </div>
 
 <p>To add a specific port to the interface:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>switchport trunk allowed vlan &amp;lt;port number&amp;gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>switchport trunk allowed vlan &lt;port-number&gt;
 </code></pre>
 </div>
 
@@ -498,7 +498,7 @@ $ no vlan &amp;lt;vlan-number&amp;gt;
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>interface ethernet 1/17
 <span class="c"># Remove unnecessary association of this interface from other VLANs.</span>
-<span class="c"># $ no switchport trunk allowed vlan &amp;lt;VLAN #&amp;gt;</span>
+<span class="c"># $ no switchport trunk allowed vlan &lt;VLAN-number&gt;</span>
 <span class="gp">$ </span>show running-config interface Ethernet 1/17
 <span class="c"># If Interface 17 is not in trunk mode</span>
 <span class="c"># $ switchport mode trunk</span>
@@ -581,7 +581,7 @@ $ no vlan &amp;lt;vlan-number&amp;gt;
 
 <p>To delete a bridge</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brctl delbr &amp;lt;bridge name&amp;gt;
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>brctl delbr &lt;bridge-name&gt;
 </code></pre>
 </div>
 

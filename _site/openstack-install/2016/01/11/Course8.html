@@ -204,7 +204,7 @@
 	
 
 	<hr />
-<p>####Course 8: Configuring Ansible and running playbooks</p>
+<p>#### Course 8: Configuring Ansible and running playbooks #</p>
 
 <hr />
 
@@ -242,9 +242,9 @@
 
 <p><strong>&lt;begin delete&gt;</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code> 	aiol:
-		<span class="c">#rabbitmq, and galera are set to multiples to test clustering</span>
-		affinity:
+<div class="highlighter-rouge"><pre class="highlight"><code>    aiol:
+        <span class="c">#rabbitmq, and galera are set to multiples to test clustering</span>
+        affinity:
         galera_container: 3
         rabbit_mq_container: 3
         ip: 172.29.236.100
@@ -255,8 +255,8 @@
 
 <p>In the case of the example given above, you would replace the above deleted section with the following:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>	infra1:
-    	ip: 10.20.20.55
+<div class="highlighter-rouge"><pre class="highlight"><code>    infra1:
+        ip: 10.20.20.55
         infra2:
         ip: 10.20.20.56
         infra3:
@@ -267,11 +267,11 @@
 <p>Using the example above, you would replace the next deleted section with the following:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>    infra1:
- 	  ip: 10.20.20.55
- 	infra2:
- 	  ip: 10.20.20.56
- 	infra3:
- 	  ip: 10.20.20.67
+      ip: 10.20.20.55
+    infra2:
+      ip: 10.20.20.56
+    infra3:
+      ip: 10.20.20.67
 </code></pre>
 </div>
 
@@ -281,11 +281,11 @@
 
 <p><strong>&lt;begin delete&gt;</strong></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>       	aiol:
- 	  <span class="c"># Horizon is set to multiple to test clustering. This test only requires x2.</span>
- 	  affinity:
- 	     horizon_containter: 2
- 	  ip: 172.29.236.100
+<div class="highlighter-rouge"><pre class="highlight"><code>        aiol:
+      <span class="c"># Horizon is set to multiple to test clustering. This test only requires x2.</span>
+      affinity:
+         horizon_containter: 2
+      ip: 172.29.236.100
 </code></pre>
 </div>
 
@@ -298,7 +298,7 @@
 <p>The last sections that need to be edited are <strong>log_hosts</strong> and <strong>haproxy_hosts</strong>. You will need to delete their respective bodies as discussed previously; and, since the HAProxy node is on the same server as the Logging node, you will need to edit both to contain the following:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>haproxy_log:
- 	     ip: 10.241.1.59
+         ip: 10.241.1.59
 </code></pre>
 </div>
 
@@ -306,7 +306,7 @@
 
 <hr />
 
-<p>###Autofilling user_secrets</p>
+<h4 id="autofilling-usersecrets">Autofilling user_secrets</h4>
 
 <p>First, navigate to the directory <strong>/opt/openstack-ansible/scripts</strong> and run the python script that will generate the passwords needed by the following command:</p>
 
@@ -317,7 +317,7 @@
 
 <hr />
 
-<p>###Final Ansible configuration and syntax check</p>
+<h4 id="final-ansible-configuration-and-syntax-check">Final Ansible configuration and syntax check</h4>
 
 <p>Next, check the file <strong>user_variables</strong> located in the directory <strong>/etc/openstack_deploy/</strong> to make sure that the line for <strong>nova_virt_type: kvm</strong> is commented out as follows:</p>
 
