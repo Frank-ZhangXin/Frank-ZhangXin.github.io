@@ -35,6 +35,9 @@ myApp.config(['$routeProvider', function($routeProvider) {
 
 myApp.run(['$rootScope', '$location', 'authFactory', 'buttonFactory', function($rootScope, $location, authFactory, buttonFactory) {
 	// Globle button attribute initialize
+	if (String(buttonFactory.getShow()) == "undefined") {
+		buttonFactory.setShow(true);
+	}
 	$rootScope.buttonShow = buttonFactory.getShow();
 	//buttonFactory.setShow($rootScope.buttonShow);
 	console.log('Initial $rootScope.buttonShow = ' + $rootScope.buttonShow);
