@@ -19,7 +19,7 @@ title: Openstack eLab
       	<div class="row">
 	        {% for topic in site.data.topics %}
 	        	<div class="col-md-6">
-		    		<a {{ topic.link }} >  <h2> {{ topic.title }}</h2></a>
+		    		<a {{ topic.link }} >  <h2> {{topic.icon}} {{ topic.title }}</h2></a>
 		    		<p>{{ topic.description }}</p>
 		    	</div>
 			{% endfor %}
